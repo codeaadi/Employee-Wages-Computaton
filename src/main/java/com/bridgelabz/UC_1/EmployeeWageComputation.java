@@ -10,9 +10,29 @@ package com.bridgelabz.UC_1;
 		 	   else
 		 		   System.out.println("Employee is Absent");
 		}
-		 	  public static void main(String[] args) {
-		 				EmployeeWageComputation  Emp = new EmployeeWageComputation ();
-		 				Emp.checkEmployeeAttendence();
+//		 	  public static void main(String[] args) {
+//		 				EmployeeWageComputation  Emp = new EmployeeWageComputation ();
+//		 				Emp.checkEmployeeAttendence();
 
-		    }
-}
+		    
+	//UC-2
+		//Daily Employee Wage
+		void checkDailyWages() {
+			int IsFullTime=1;
+		    int EmployeeRatePerHr=20;
+		    int FulldayHr=8;
+		    
+		    double employeeCheck = Math.floor(Math.random() * 10) %2;
+			if ( employeeCheck == IsFullTime ) {
+				System.out.println( "EmployeeFulldaywage = " + ( FulldayHr * EmployeeRatePerHr));
+			}
+				else {
+					System.out.println ("Employeewage=" + (0));
+				}
+		}
+		
+		public static void main(String[] args) {
+			EmployeeWageComputation  Emp = new EmployeeWageComputation ();
+			Emp.checkDailyWages();
+		}
+	}
