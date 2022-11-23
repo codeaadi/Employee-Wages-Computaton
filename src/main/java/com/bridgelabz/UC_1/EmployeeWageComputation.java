@@ -31,8 +31,33 @@ package com.bridgelabz.UC_1;
 				}
 		}
 		
+//		public static void main(String[] args) {
+//			EmployeeWageComputation  Emp = new EmployeeWageComputation ();
+//			Emp.checkDailyWages();
+		
+	
+		//UC-3
+		void checkPartimeandFulltimeWages() {
+			int IsFullTime = 1;
+		    int IsPartTime= 2 ;
+		    int EmployeeRatePerHr= 20;
+		    int empHrs= 0;
+		    int empWage= 0;
+		    
+		    double employeeCheck = Math.floor(Math.random() * 10) %3;
+			if ( employeeCheck == IsFullTime ) {
+				empHrs= 8;
+			}
+				else if ( employeeCheck == IsPartTime){		
+					empHrs=4;
+				}
+			empWage = empHrs * EmployeeRatePerHr;
+		System.out.println("empWage : =" + empWage);
+		}
+
 		public static void main(String[] args) {
 			EmployeeWageComputation  Emp = new EmployeeWageComputation ();
-			Emp.checkDailyWages();
-		}
+				Emp.checkPartimeandFulltimeWages();
 	}
+	}
+	
